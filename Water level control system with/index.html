@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+  <script src="../raphael-2.1.4.min.js"></script>
+  <script src="../justgage.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+ 
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDF54FOrGGtEePBfc7aKBG_6SWpHo5C5kQ",
+    authDomain: "watercontrol-96fed.firebaseapp.com",
+    databaseURL: "https://watercontrol-96fed.firebaseio.com",
+    projectId: "watercontrol-96fed",
+    storageBucket: "watercontrol-96fed.appspot.com",
+    messagingSenderId: "869893332660"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<style>
+
+h2.ex1 {display: inline;}
+
+</style>
+
+</head>
+<body style="background-color: lightblue" >
+    
+<div class="container-fluid">
+  <div class="row">
+    <!--<div class="col-sm"> -->
+     <h2>water and leak</h2>
+     <!-- <form action = "database.html">
+        <input type="submit" value="database" ><br><br>
+     </form> -->
+	 <h2 class = "ex1">water left in tank : </h2> <h2 id="water" class = "ex1">  <h2 class = "ex1"> %</h2> </h2><br><br>
+	 <h2 class = "ex1">leaked between input and output: </h2> <h2 id="leak"  class = "ex1"></h2>
+    <!-- </div> -->
+  </div>
+</div>
+
+</body>
+
+<script>
+    var refList = firebase.database().ref().child('/');
+    var objList;
+    var leak;
+    
+    refList.on("value", (snapshot) => {
+        objList = snapshot.val();
+        $('#water').text((40 - objList['waterrealtime'])*3.33);  
+        leak = (objList['inputrealtime']) - (objList['outputrealtime'] ) ;
+        if(leak < 0){
+            leak = 0;
+        }
+        $('#leak').text(leak); 
+        waterful = objList['water'];
+        console.log("waterfulis :" + waterful);
+        y = waterful;
+        console.log("y :" + y);
+
+    }, (error) => {
+        alert("เกิดความผิดพลาดจากการโหลดข้อมูลจาก Database")
+    });
+    
+   
+    
+    </script>
+
+</html>

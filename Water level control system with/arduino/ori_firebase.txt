@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyACTYWLLj6WSVPfnsngtP_p51Aaz9SKGdc",
+            authDomain: "aquarium-systems.firebaseapp.com",
+            databaseURL: "https://aquarium-systems.firebaseio.com",
+            projectId: "aquarium-systems",
+            storageBucket: "aquarium-systems.appspot.com",
+            messagingSenderId: "1035941209434"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <h1>Data pH</h1><br>
+    <h1 id="data"></h1>
+</body>
+<script>
+    var refList = firebase.database().ref().child('/');
+
+
+    refList.on("value", (snapshot) => {
+        var objList = snapshot.val();
+        $('#data').text(objList['temp']);    
+    }, (error) => {
+        alert("เกิดความผิดพลาดจากการโหลดข้อมูลจาก Database")
+    });
+</script>
+
+</html>

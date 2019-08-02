@@ -1,0 +1,13 @@
+<p>sweetalert works!</p>
+
+<button [swal]="['Oops!', 'This is not implemented yet erjngoerjgoerijgioerjgeripogjeriojgioerjgoierjgioer :/', 'warning']">
+    Do it!
+  </button>
+
+  <button
+  [swal]="{ title: 'Enter your email', input: 'email' }"
+  (confirm)="saveEmail($event)"
+  (cancel)="handleRefusalToSetEmail($event)">
+
+  Set my e-mail address
+</button>

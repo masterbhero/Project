@@ -1,0 +1,53 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Pattaya&display=swap" rel="stylesheet">
+<!------ Include the above in your HEAD tag ---------->
+
+<br><br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div style="text-align:center">
+                    <div class="card-body">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label class=" font" style="font-size: 25px;">นาย สมคิด รักดี</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group ">
+                                    <div class="btn-group" role="group" aria-label="Third group">
+                                        <button routerLink="/edit" type="button"class="btn btn-warning btn-lg btn-block login-button text-dark font"> แก้ไข</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group ">
+                                        <div class="btn-group" role="group" aria-label="Third group">
+                                                <button routerLink="/managedevice" type="button"class="btn btn-info btn-lg btn-block login-button font text-white"> จัดการอุปกรณ์</button>
+                                            </div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="row d-flex justify-content-center">
+                        <ng-container *ngFor="let displayplot of plot.name;let i = index">
+                            <button routerLink="/plotmenu" class=" bn-secondary " style="width:170px;height:150px">
+                                {{displayplot}}
+                            </button>
+                        </ng-container><br><br>
+                    </div>
+                        <div class="card-body">
+                            <div style="float: right;">
+                                <button mat-raised-button (click)="openDialog()" type="button"
+                                    class="btn btn-danger btn-lg btn-block login-button font"> ออกจากระบบ</button><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

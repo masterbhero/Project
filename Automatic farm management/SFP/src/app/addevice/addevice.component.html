@@ -1,0 +1,53 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Pattaya&display=swap" rel="stylesheet">
+<!------ Include the above in your HEAD tag ---------->
+
+<br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div style="text-align:center">
+          <div class="card-header bg-secondary text-white font" style="font-size: 30px;">แก้ไขข้อมูล</div>
+        </div><br>
+
+        <div class="card-body ">
+            <form class="form-horizontal" method="post" action="#">
+                <div class="form-group row">
+                  <label for="inputEmail" class="col-sm-4 col-form-label ">ชื่อแปลงผัก</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control" id="inputName" placeholder="ชื่อแปลงผัก">
+                  </div>
+                </div><br>
+    
+                <div class="form-group row">
+                  <label for="inputEmail" class="col-sm-4 col-form-label ">รหัสไมโครคอลโทรลเลอร์</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control" id="inputLastname" placeholder="รหัสไมโครคอลโทรลเลอร์">
+                  </div>
+                </div><br><br>
+    
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-3">
+                      <div class="form-group ">
+                        <button mat-raised-button (click)="openDialog()" type="button"
+                          class="btn btn-success btn-lg btn-block login-button font">บันทึก</button>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-group ">
+                        <button routerLink="/managedevice" type="button"
+                          class="btn btn-danger btn-lg btn-block login-button font">ยกเลิก</button>
+                      </div>
+                    </div>
+                  </div>
+              </form>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <br><br>

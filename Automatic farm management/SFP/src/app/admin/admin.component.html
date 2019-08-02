@@ -1,0 +1,138 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Pattaya&display=swap" rel="stylesheet">
+
+<!------ Include the above in your HEAD tag ---------->
+
+<br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <!-- <div style="text-align:center">
+          <div class="card-header bg-secondary text-white font" style="font-size: 30px;">สมาชิก</div>
+        </div> -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+              <li class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <button routerLink="/admin" type="button" class="btn btn-outline-success">สมาชิก</button>
+                  <button routerLink="/plant-data" type="button" class="btn btn-outline-success">ข้อมูลพืช</button>
+                  <button mat-raised-button (click)="openDialog()" type="button"class="btn btn-outline-danger font">ออกจากระบบ</button>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </nav>
+
+        <!-- <button routerLink="/admin" type="button" class="btn btn-warning"> สมาชิก</button>
+           <button routerLink="/plant-data" type="button" class="btn btn-warning"> ข้อมูลพืช</button> -->
+
+        <div class="card-body">
+          <br>
+          <div class="table-responsive">
+            <table class="table table-secondary ">
+              <thead>
+                <th scope="col">
+                  <div class="btn-group" role="group" aria-label="Third group">
+                    <button routerLink="/login" type="button" class="btn btn-success"> เพิ่ม + </button>
+                  </div>
+                </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>นาย</td>
+                  <td>สมคิด</td>
+                  <td>รักดี</td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                      <button type="button" class="btn btn-warning"> แก้ไข</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                      <button mat-raised-button (click)="openDialog()" type="button" class="btn btn-danger">ลบ</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                      <button routerLink="/plot" type="button" class="btn btn-info">รายละเอียด</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>นาย</td>
+                  <td>ดี</td>
+                  <td>เสมอ</td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                      <button type="button" class="btn btn-warning"> แก้ไข</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                      <button mat-raised-button (click)="openDialog()" type="button" class="btn btn-danger">ลบ</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                      <button type="button" class="btn btn-info">รายละเอียด</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>นาย</td>
+                  <td>เอ </td>
+                  <td>รักดี</td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                      <button type="button" class="btn btn-warning"> แก้ไข</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                      <button mat-raised-button (click)="openDialog()" type="button" class="btn btn-danger">ลบ</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                      <button type="button" class="btn btn-info">รายละเอียด</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br>
+          <!-- <div class="row d-flex justify-content-center"> -->
+          <!-- <div class="col-md-3">
+              <button type="submit" class="btn btn-warning btn-md btn-block">ย้อนกลับ</button>
+            </div> -->
+          <!-- <div class="col-md-6"></div>
+            <div class="col-md-3-responsive">
+              <button mat-raised-button (click)="openDialog()" type="button"
+                class="btn btn-warning btn-lg btn-block font"> ออกจากระบบ</button>
+            </div> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

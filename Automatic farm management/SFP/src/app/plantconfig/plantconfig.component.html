@@ -1,0 +1,70 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div style="text-align:center">
+          <div class="card-header bg-secondary font text-white" style="font-size: 25px;">ตั้งค่าแปลงผัก</div>
+        </div><br>
+        <div class="card-body">
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">ชื่อแปลง</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="แปลงที่ 1">
+                </div>
+              </div>
+              <div class="container">
+                <div class="form-row">
+                  <div class="col-md-3 mb-3">
+                    <label for="validationCustom03">พืช</label>
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="พืช" required>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationCustom04">อุณหภูมิ</label>
+                    <input type="text" class="form-control" id="validationCustom04" placeholder="อุณหภูมิ" required>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">ความชื้น</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="ความชื้น" required>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">แสง</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="แสง" required>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">จำนวนที่ใช้ปลูก</th>
+                      <th scope="col">30</th>
+                      <th scope="col">วัน</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="card-body">
+              <div class="row d-flex justify-content-center">
+                <div class="col-md-3">
+                  <button routerLink="/plotmenu" type="submit" class="btn btn-danger btn-lg btn-block login-button font">ยกเลิก</button>
+                </div>
+
+                <div class="col-md-3">
+                  <button type="submit" class="btn btn-success btn-lg btn-block login-button font">บันทึก</button><br>
+        
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
